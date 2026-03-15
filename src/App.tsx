@@ -421,14 +421,16 @@ const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
   reader.onload = () => {
     const base64 = reader.result as string;
 
-    const newNode: FileNode = {
-      id: Date.now(),
-      name: file.name,
-      type: "file",
-      parent: 1, // dossier src
-      language: "plaintext",
-      content: base64
-    };
+const ext = file.name.split(".").pop();
+
+const newNode: FileNode = {
+  id: Date.now(),
+  name: file.name,
+  type: "file",
+  parent: 1,
+  language: ext,
+  content: base64
+};
 
     setNodes([...nodes, newNode]);
   };
