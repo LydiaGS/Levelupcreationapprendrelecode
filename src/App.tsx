@@ -158,10 +158,10 @@ export default function MiniCodeEditor() {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="card">
+<div class="icon">💻</div>
     <h1>Hello Level Up Creation</h1>
-    <p>Mini éditeur créé par Level Up Creation</p>
+    <p>Tapez vos premières lignes de code</p>
     <button id="btn">Essaye-moi</button>
   </div>
 
