@@ -446,7 +446,7 @@ const exportZip = async () => {
 
     while (parent) {
       path = parent.name + "/" + path;
-      parent = nodes.find((n) => n.id === parent.parent);
+      parent = nodes.find((n) => n.id === parent?.parent);
     }
 
     return path;
